@@ -67,8 +67,6 @@ function create_dynamic_modal(dataset){
 function. DIVs are dynamically created and use the response JSON object from the API */
 function create_employee(employee){
 
-    console.log(employee);
-
     let gallery = document.querySelector('#gallery');
 
     card_div = document.createElement('div')
@@ -99,7 +97,7 @@ function create_employee(employee){
     */
     card_div.setAttribute('data-name', 
         `${employee.name.first + ' ' + employee.name.last}`);
-    card_div.setAttribute('data-phone', format_phone(employee.phone));
+    card_div.setAttribute('data-phone', format_phone(employee.cell));
     card_div.setAttribute('data-birthday', format_birthday(employee.dob.date));
     card_div.setAttribute('data-email', employee.email);
     card_div.setAttribute('data-city', employee.location.city);
